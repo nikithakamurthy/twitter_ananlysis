@@ -106,7 +106,7 @@ def countAllCaps(text):
     return len(re.findall("[A-Z0-9]{3,}", text))
 
 """ Creates a dictionary with slangs and their equivalents and replaces them """
-with open('slang.txt') as file:
+with open('slang.txt',encoding='latin-1') as file:
     slang_map = dict(map(str.strip, line.partition('\t')[::2])
     for line in file if line.strip())
 
